@@ -1,4 +1,4 @@
-import 'package:epam_homeworks/post_reposity_impl.dart';
+import 'package:epam_homeworks/post_repository_impl.dart';
 import 'package:flutter/material.dart';
 
 import 'post.dart';

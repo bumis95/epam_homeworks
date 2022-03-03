@@ -1,7 +1,7 @@
-import 'package:epam_homeworks/post_repository_impl.dart';
+import 'package:epam_homeworks/repository/post_repository_impl.dart';
 import 'package:flutter/material.dart';
 
-import 'post.dart';
+import '../model/post.dart';
 
 class SelectionScreen extends StatefulWidget {
   const SelectionScreen({Key? key}) : super(key: key);
@@ -30,14 +30,15 @@ class _SelectionScreenState extends State<SelectionScreen> {
                 itemCount: snapshot.data?.length,
                 itemBuilder: (context, index) => ListTile(
                   onTap: () {
-                    Navigator.pop(context, snapshot.data![index].title);
+                    Navigator.pop(context, snapshot.data?[index].title);
                   },
-                  title: Text(snapshot.data![index].title),
+                  title: Text(snapshot.data?[index].title ?? 'null'),
                 ),
               );
             } else if (snapshot.hasError) {
               return Text('${snapshot.error}');
             }
+
             return const CircularProgressIndicator();
           },
         ),

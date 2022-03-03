@@ -1,4 +1,4 @@
-import 'package:epam_homeworks/home_screen.dart';
+import 'package:epam_homeworks/ui/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

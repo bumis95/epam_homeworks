@@ -1,4 +1,4 @@
-import 'package:epam_homeworks/selection_screen.dart';
+import 'package:epam_homeworks/ui/selection_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -9,7 +9,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  String _title = 'I am going to update';
+  var _title = 'I am going to update';
 
   @override
   Widget build(BuildContext context) {

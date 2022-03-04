@@ -32,7 +32,7 @@ class _SelectionScreenState extends State<SelectionScreen> {
                   onTap: () {
                     Navigator.pop(context, snapshot.data?[index].title);
                   },
-                  title: Text(snapshot.data?[index].title ?? 'null'),
+                  title: Text(snapshot.data?[index].title ?? ''),
                 ),
               );
             } else if (snapshot.hasError) {

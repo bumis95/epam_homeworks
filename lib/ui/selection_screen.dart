@@ -1,5 +1,6 @@
 import 'package:epam_homeworks/repository/post_repository_impl.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../model/post.dart';
 
@@ -17,9 +18,7 @@ class _SelectionScreenState extends State<SelectionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Flutter Demo',
-        ),
+        title: Text(AppLocalizations.of(context)!.app_name),
       ),
       body: Center(
         child: FutureBuilder<List<Post>>(

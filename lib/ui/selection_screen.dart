@@ -18,7 +18,7 @@ class _SelectionScreenState extends State<SelectionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.app_name),
+        title: Text(AppLocalizations.of(context)?.app_name ?? ''),
       ),
       body: Center(
         child: FutureBuilder<List<Post>>(

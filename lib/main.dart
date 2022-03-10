@@ -6,7 +6,7 @@ void main() {
   runApp(
     MaterialApp(
       onGenerateTitle: (BuildContext context) =>
-          AppLocalizations.of(context)!.app_name,
+          AppLocalizations.of(context)?.app_name ?? '',
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       home: const HomeScreen(),

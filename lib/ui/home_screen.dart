@@ -10,13 +10,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late var _title = AppLocalizations.of(context)!.before_text_changed;
+  late var _title = AppLocalizations.of(context)?.before_text_changed ?? '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(AppLocalizations.of(context)!.app_name),
+        title: Text(AppLocalizations.of(context)?.app_name ?? ''),
       ),
       body: Center(
         child: Column(
@@ -40,10 +40,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
                 setState(() {
                   _title =
-                      '${AppLocalizations.of(context)!.after_text_changed} ${result ?? AppLocalizations.of(context)!.nothing}';
+                      '${AppLocalizations.of(context)?.after_text_changed} ${result ?? AppLocalizations.of(context)?.nothing}';
                 });
               },
-              child: Text(AppLocalizations.of(context)!.next_button_label),
+              child:
+                  Text(AppLocalizations.of(context)?.next_button_label ?? ''),
             ),
           ],
         ),

@@ -1,0 +1,7 @@
+{
+  "app_name": "Flutter App",
+  "next_button_label": "Перейти на второй экран",
+  "before_text_changed": "Я собираюсь обновить этот текст",
+  "after_text_changed": "ВЫ ВЫБРАЛИ",
+  "nothing": "НИЧЕГО"
+}

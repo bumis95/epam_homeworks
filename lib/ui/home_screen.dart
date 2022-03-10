@@ -1,5 +1,6 @@
 import 'package:epam_homeworks/ui/selection_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -9,15 +10,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  var _title = 'I am going to update';
+  late var _title = AppLocalizations.of(context)?.before_text_changed ?? '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Flutter Demo',
-        ),
+        title: Text(AppLocalizations.of(context)?.app_name ?? ''),
       ),
       body: Center(
         child: Column(
@@ -40,10 +39,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
                 setState(() {
-                  _title = 'YOU CHOSE ${result ?? 'NOTHING'}';
+                  _title =
+                      '${AppLocalizations.of(context)?.after_text_changed} ${result ?? AppLocalizations.of(context)?.nothing}';
                 });
               },
-              child: const Text('Go to 2nd screen'),
+              child:
+                  Text(AppLocalizations.of(context)?.next_button_label ?? ''),
             ),
           ],
         ),
